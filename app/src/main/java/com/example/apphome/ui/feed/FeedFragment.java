@@ -13,6 +13,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.apphome.MainActivity;
 import com.example.apphome.databinding.FragmentFeedBinding;
 
 public class FeedFragment extends Fragment {
@@ -41,6 +42,19 @@ public class FeedFragment extends Fragment {
 
         appName = binding.appName3;
         appName.setText("Instagram");
+
+        // set text size (not sure how to do this in a for loop for each frame)
+        int textSize = ((MainActivity)getActivity()).getTextSize();
+        binding.notificationText.setTextSize(textSize);
+        binding.notificationText2.setTextSize(textSize);
+        binding.notificationText3.setTextSize(textSize);
+        binding.notificationText4.setTextSize(textSize);
+        binding.notificationText5.setTextSize(textSize);
+        binding.notificationText6.setTextSize(textSize);
+        binding.notificationText7.setTextSize(textSize);
+        binding.notificationText8.setTextSize(textSize);
+        binding.notificationText9.setTextSize(textSize);
+
 
 
 

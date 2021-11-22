@@ -15,30 +15,37 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.152" />
+        app:layout_constraintVertical_bias="0.152"
+        android:text="Login"/>
 
     <TextView
         android:id="@+id/username_input_prompt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter your username:"
+        android:text="Enter your username or email:"
         android:textSize="16sp"
-        tools:layout_editor_absoluteX="12dp"
-        tools:layout_editor_absoluteY="235dp" />
+        app:layout_constraintStart_toStartOf="@id/text_login"
+        app:layout_constraintTop_toBottomOf="@id/text_login"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+ />
 
     <EditText
         android:id="@+id/username_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="12dp"
-        tools:layout_editor_absoluteY="267dp" />
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintStart_toStartOf="@id/username_input_prompt"
+        app:layout_constraintTop_toBottomOf="@id/username_input_prompt"/>
 
     <TextView
         android:id="@+id/password_input_prompt"
@@ -46,16 +53,20 @@
         android:layout_height="wrap_content"
         android:text="Enter your password:"
         android:textSize="16sp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="328dp" />
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/username_input_prompt"
+        app:layout_constraintTop_toBottomOf="@id/username_edit_text"/>
 
     <EditText
         android:id="@+id/password_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="363dp" />
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintStart_toStartOf="@id/password_input_prompt"
+        app:layout_constraintTop_toBottomOf="@id/password_input_prompt"/>
 
     <Button
         android:id="@+id/login_button"

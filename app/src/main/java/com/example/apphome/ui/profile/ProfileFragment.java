@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -22,6 +23,7 @@ public class ProfileFragment extends Fragment {
     private ProfileViewModel homeViewModel;
     private FragmentProfileBinding binding;
 
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel =
@@ -37,6 +39,11 @@ public class ProfileFragment extends Fragment {
 //                textView.setText(s);
 //            }
 //        });
+
+        // set text size
+        int textSize = ((MainActivity)getActivity()).getTextSize();
+        binding.connectApp.setTextSize(textSize);
+        binding.connectedApps.setTextSize(textSize);
 
 
         final ImageView image = binding.imageProfile;
