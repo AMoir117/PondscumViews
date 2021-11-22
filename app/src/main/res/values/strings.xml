@@ -12,6 +12,8 @@
     <string name="menu_profile">Profile</string>
     <string name="menu_settings">Settings</string>
     <string name="menu_logout">Logout</string>
+    <string name="feed_notification">Notification Container</string>
+    <string name="filler">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut maximus accumsan semper. Vestibulum malesuada nisl est, et dignissim orci dapibus vel. Duis magna mauris, tempor ut mattis nec, feugiat eu nibh. Donec consequat gravida mi, vel egestas libero venenatis molestie. Vestibulum nec massa congue, ornare risus eget, consequat massa. Etiam posuere purus in porttitor bibendum. Etiam fringilla elit at urna hendrerit, non tincidunt massa accumsan.</string>
 
 
 </resources>

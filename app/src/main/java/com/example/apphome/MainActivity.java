@@ -3,6 +3,7 @@ package com.example.apphome;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.ImageView;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -39,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
         */
 
         // write an onclick listener for the login on the top right of the app bar
+        // write an onclick listener for the logout button in the nav bar
+        //  then when clicked show a pop up "are you sure" yes/no then change activities
+        //  to login
 
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
@@ -51,6 +55,10 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+
+//        imageView = (ImageView) findViewById(R.id.imageView2);
+
     }
 
     @Override

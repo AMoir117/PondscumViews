@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.apphome.databinding.FragmentFeedBinding;
 
@@ -18,6 +19,9 @@ public class FeedFragment extends Fragment {
 
     private FeedViewModel feedViewModel;
     private FragmentFeedBinding binding;
+
+    private TextView appName;
+    private TextView notificationText;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -27,13 +31,27 @@ public class FeedFragment extends Fragment {
         binding = FragmentFeedBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textFeed;
-        feedViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
+
+        appName = binding.appName;
+        appName.setText("Discord");
+
+        appName = binding.appName2;
+        appName.setText("Twitter");
+
+        appName = binding.appName3;
+        appName.setText("Instagram");
+
+
+
+
+//        final TextView textView = binding.textFeed;
+//        feedViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+//            @Override
+//            public void onChanged(@Nullable String s) {
+//                textView.setText(s);
+//            }
+//        });
         return root;
     }
 
@@ -42,5 +60,6 @@ public class FeedFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+
 }
 
