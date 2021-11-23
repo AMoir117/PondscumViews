@@ -34,6 +34,15 @@ public class SettingsFragment extends Fragment {
         binding = FragmentSettingsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
+        // text next to seek bar
+        textSize = binding.textSize;
+
+        // display current textSize value and set progress value
+        int fontSize = ((MainActivity)getActivity()).getTextSize();
+        textSize.setText("Set Text Size: " + fontSize);
+        binding.seekBarTextSize.setProgress(fontSize);
+
+        // textSize seek bar
         seekBarTextSize = binding.seekBarTextSize;
         seekBarTextSize.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             // default value
@@ -52,7 +61,6 @@ public class SettingsFragment extends Fragment {
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                textSize = binding.textSize;
                 textSize.setText("Set Text Size: " + progressChangedValue);
                 textSize.setTextSize(progressChangedValue);
 

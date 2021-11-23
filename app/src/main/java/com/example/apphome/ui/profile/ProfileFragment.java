@@ -46,7 +46,7 @@ public class ProfileFragment extends Fragment {
         binding.connectedApps.setTextSize(textSize);
 
 
-        final ImageView image = binding.imageProfile;
+//        final ImageView image = binding.imageProfile;
 
 
         return root;
