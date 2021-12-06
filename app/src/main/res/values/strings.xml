@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AppHome</string>
+    <string name="app_name">Wired</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Username</string>
@@ -14,6 +14,7 @@
     <string name="menu_logout">Logout</string>
     <string name="feed_notification">Notification Container</string>
     <string name="filler">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut maximus accumsan semper. Vestibulum malesuada nisl est, et dignissim orci dapibus vel. Duis magna mauris, tempor ut mattis nec, feugiat eu nibh. Donec consequat gravida mi, vel egestas libero venenatis molestie. Vestibulum nec massa congue, ornare risus eget, consequat massa. Etiam posuere purus in porttitor bibendum. Etiam fringilla elit at urna hendrerit, non tincidunt massa accumsan.</string>
-
+    <string name="notification_activity_label">Notification</string>
+    <string name="reply_label">Click here to reply</string>
 
 </resources>

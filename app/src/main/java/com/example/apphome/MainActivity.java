@@ -1,18 +1,22 @@
 package com.example.apphome;
 
+// Main Activity
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.RemoteInput;
+import androidx.core.app.TaskStackBuilder;
+
+// Views
+
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
-import android.widget.ImageView;
 import androidx.appcompat.widget.Toolbar;
-
 import com.example.apphome.ui.login.LoginFragment;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
-
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -29,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private int textSize = 12;
 
+    int mRequestCode = 1000;
+    private static final String KEY_TEXT_REPLY = "key_text_reply";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,24 +45,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMain.toolbar);
-//        binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
 
 
         toolbar = findViewById(R.id.toolbar);
-        toolbar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, LoginFragment.class);
-
-                startActivity(intent);
-            }
-        });
+//        toolbar.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this, LoginFragment.class);
+//
+//                startActivity(intent);
+//            }
+//        });
 
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
@@ -68,8 +69,6 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
-
-//        imageView = (ImageView) findViewById(R.id.imageView2);
 
     }
 
